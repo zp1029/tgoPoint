@@ -1,0 +1,456 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>聰明轉點 享受多一點</title>
+<link rel="stylesheet" href="https://www.thsrc.com.tw/Common/assets/css/kyart-rwd.css">
+<link rel="stylesheet" href="https://www.thsrc.com.tw/Common/assets/css/kyart-style.css">
+<link rel="stylesheet" href="https://www.thsrc.com.tw/event/appstyle/PromotionCSS.css">
+
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+
+<style>
+/*******品牌logo列表block*******/	
+.brand_logos {
+    display: inline-block;
+    margin: 10px;
+}
+.brand_logos>div {
+    display: block;
+    float: left;
+    margin: 4px;
+    background: #FFF;
+    width: calc(100%/6 - 8px );
+    /*border: 1px solid #CCC;*/
+} /***** width=(100%/一行數量-間距) ****/
+.brand_logos>div>img {
+    width: 100%;
+    padding: 8px 8px 0px 8px;
+}
+	
+/*******活動內容：紅利兌換列表block*******/
+.brand-table {
+    width: 100%;
+    border: 1px solid #EFEFF1;
+    padding: 5px;
+    display: flow-root;    margin-bottom: 30px;
+}
+.brand-title {
+    width: 100%;
+    float: left;background-color: #EFEFF1;
+}
+.brand-title>div {
+    float: left;
+    line-height: 2.2rem;
+}
+/*******活動內容：紅利兌換列表-各品牌row*******/
+.brand-content {
+    display: flex;width: 100%;border-top: 1px solid #EFEFF1;
+}
+.brand-content >div{float: left;padding: 10px 0px;
+    margin-top: 10px;height: fit-content;}
+	
+/*******c1:LOGO*******/	
+.brand-content-c1 {
+    width: 230px;
+    text-align: center;
+}
+.brand-content-c1>img {
+    width: 185px;background-color: #FFF;/*border: 1px solid #efeff1;*/
+}	
+	
+/*******c2:points*******/	
+.brand-content-c2 {
+    width: calc(100% - 380px);
+	display: flex;
+	flex-wrap: wrap;
+    justify-content:flex-start;
+	align-content: flex-start;
+ 
+}
+.point-exchange-block{padding: 2px 12px;
+    border: 1px solid #efeff1;
+    border-radius: 20px;
+    margin: 5px;background: #FFF;}
+	
+.tgopoints {
+    font-size: 1.3em;
+    color:#DD6A38;padding-left: 22px;background-image: url("image/tgopoint.png");background-size: 18px;background-repeat: no-repeat;
+    background-position-y: 7px;font-weight: 500;display: inline-block;font-family: math;
+}
+	
+	/*******c3:btn*******/	
+	.brand-content-c3 {
+    width: 150px; text-align: center;
+}
+	.brand-content-c3>a{display: block; width: 90%;padding: 10px;border: 1px solid #999;margin: 0px 5px 10px 0px;background: #FFF;}
+	.brand-content-c3>a:hover{cursor: pointer;}
+	
+	.go-exchange{background:#ca4f0f!important;color:#FFF;border: 0px!important;}
+	.go-exchange:hover{color: #333;background-color: #f5a552!important;}
+	.EFEFF1{background-color: #EFEFF1;}
+	
+	/*******c4:注意事項link*******/
+	.brand-content-c4{width: 110px;font-size: 0.925rem;}
+	.brand-content-c4>span{vertical-align: middle;padding: 15px 1px;}
+	.brand-content-c4:hover{color:#ca4f0f;cursor: pointer;}
+	.brand-content-c4>.material-icons-outlined{font-size:0.9rem;}
+	
+	/*******注意事項block*******/
+	
+	#company-point,
+	#company-coupon{font-weight: 500;margin-left:-20px;line-height: 2rem;}
+	#company-point-ul, 
+	#company-coupon-ul{list-style-type: circle;}
+	.company-content{margin-top: 12px;list-style-type: circle;}
+	.material-icons{vertical-align: text-bottom;}
+	.material-icons:hover{cursor: pointer;}
+	.material-icons-hide{transform: rotate(-90deg)};
+
+	@media (max-width: 1190px){
+		
+		
+	}
+	
+</style>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script>
+		
+$(document).ready(function(){
+	
+	
+	$("#company-point").click(function() {
+		$("#company-point >span").toggleClass("material-icons-hide");
+		$("#company-point-ul").toggle(500);
+ 
+	});
+		
+	 $("#company-coupon").click(function() {
+		 $("#company-coupon >span").toggleClass("material-icons-hide");
+		$("#company-coupon-ul").toggle(500);
+	});
+
+});
+		
+		
+		function showNotice(type){
+			var type=type;
+			console.log("type:"+type);
+			if(type==1){
+			   $("#company-coupon >span").addClass("material-icons-hide");
+			   $("#company-coupon-ul").css("display","none");
+				
+			   $("#company-point >span").removeClass("material-icons-hide");
+			   $("#company-point-ul").css("display","block");
+
+				console.log(type);
+				
+				
+			}else{
+				$("#company-point >span").addClass("material-icons-hide");
+				 $("#company-point-ul").css("display","none");
+				
+				$("#company-coupon >span").removeClass("material-icons-hide");
+				$("#company-coupon-ul").css("display","block");
+				
+				console.log(type);
+			}
+			
+		location.href="#note-content";	
+			
+		}
+	
+	</script>
+</head>
+
+<body>
+<div class="main" id="content" style="width:1200px;max-width: 100%; margin: 0px auto;">
+  <div class="container">
+  <section>
+    <section class="header">
+      <h2 class="title-01 h3">聰明轉點 享受多一點</h2>
+    </section>
+    <div class="con">
+    <!--主視覺區塊-->
+    <section id="section"> <img src="image/banner.jpg" width="100%" alt=""/> 
+      
+      <!--品牌清單
+      <section>
+        <div class="brand_logos">
+          <div style="background:#017C7C"><img src="image/bankCTBCw.png"></div>
+          <div><img src="image/bankCATHAY.png"></div>
+          <div><img src="image/bankRLS.png"></div>
+          <div><img src="image/bankUBOT.png"></div>
+          <div><img src="image/bankFUBON.png"> </div>
+          <div><img src="image/bankHUA.png"></div>
+          <div><img src="image/openpoint.png"></div>
+          <div><img src="image/hamipoint.png"></div>
+          <div><img src="image/kkday.png"></div>
+          <div><img src="image/uupon.png"></div>
+        </div>
+      </section>-->
+      <h3>活動期間</h3>
+      <div class="note">
+        <p>即日至2022/12/31。</p>
+      </div>
+      <h3>活動內容</h3>
+      <div class="note" style="padding-bottom:0px">
+        <ul>
+          <li>各家合作轉點之卡友（會員）須同時具有TGo會員資格，方可參加本兌換活動。</li>
+        </ul>
+      </div>
+      <div class="more_btn"><a class="more" data-ajax="false" href="https://tgo.thsrc.com.tw/index.html" target="_blank" title="立即加入 高鐵TGo會員[另開新視窗]">立即加入高鐵TGo會員</a></div>
+      <div class="note" style="padding-bottom:0px">
+        <ul>
+          <li>各家紅利點數兌換TGo點數，如下列表：</li>
+        </ul>
+      </div>
+      <!--點數兌換列表 start-->
+      <div class="brand-table">
+        <div class="brand-title">
+          <div class="brand-content-c1"><span>合作廠商</span></div>
+          <div class="brand-content-c2" style="justify-content: center"><span>紅利點數 → TGo點數</span></div>
+		  
+          <div class="brand-content-c3"></div>
+        </div>
+		  <!--#1-->
+        <div class="brand-content">
+          <div class="brand-content-c1"><img src="image/bankCTBCw.png"><!--<p>中信銀行</p>--></div>
+          <div class="brand-content-c2">
+            <div class="point-exchange-block"><span>550點</span> → <span class="tgopoints">200</span></div><div class="point-exchange-block"><span>1,400點</span> → <span class="tgopoints">500</span></div>
+            <div class="point-exchange-block"><span>3,000點</span> → <span class="tgopoints">1,000</span></div><div class="point-exchange-block"><span>5,500點</span> → <span class="tgopoints">2,000</span></div>
+          </div>
+          <div  class="brand-content-c4" onclick="showNotice(1);">
+			 <span class="material-icons-outlined">info</span><span style="text-decoration:underline">注意事項</span>
+        </div>			
+          <div  class="brand-content-c3">
+			  <a class="go-exchange">前往兌換</a>
+			  <a class="">兌換教學</a>
+			  
+        </div>
+      </div>
+		  <!--#1 end-->
+		  <!--#2-->
+		<div class="brand-content EFEFF1">
+          <div class="brand-content-c1"><img src="image/bankCATHAY.png"><!--<p>國泰優惠</p>--></div>
+          <div class="brand-content-c2">
+            <div class="point-exchange-block"><span>55點</span> → <span class="tgopoints">200</span></div><div class="point-exchange-block"><span>135點</span> → <span class="tgopoints">500</span></div>
+          </div>
+			          <div  class="brand-content-c4" onclick="showNotice(1);">
+			  <span class="material-icons-outlined">info</span><span style="text-decoration:underline">注意事項</span>
+        </div>	
+          <div class="brand-content-c3">
+			  <a class="go-exchange">前往兌換</a>
+			  <a class="">兌換教學</a>
+			  
+        </div>
+      </div>
+		  <!--#2 end-->
+		  <!--#3-->
+		<div class="brand-content">
+          <div class="brand-content-c1"><img src="image/bankRLS.png"><!--<p>台新銀行</p>--></div>
+          <div class="brand-content-c2">
+            <div class="point-exchange-block"><span>15點</span> → <span class="tgopoints">60</span></div><div class="point-exchange-block"><span>55點</span> → <span class="tgopoints">200</span></div>
+          </div>
+				          <div  class="brand-content-c4" onclick="showNotice(1);">
+			  <span class="material-icons-outlined">info</span><span style="text-decoration:underline">注意事項</span>
+        </div>	
+          <div class="brand-content-c3">
+			  <a class="go-exchange">前往兌換</a>
+			  <a class="">兌換教學</a>
+		 </div>
+		</div>	
+		   <!--#3 end-->  
+		<!--#4-->
+        <div class="brand-content EFEFF1">
+          <div class="brand-content-c1"><img src="image/bankUBOT.png"></div>
+          <div class="brand-content-c2">
+            <div class="point-exchange-block"><span>1,000點</span> → <span class="tgopoints">200</span></div><div class="point-exchange-block"><span>2,500點</span> → <span class="tgopoints">500</span></div>
+            <div class="point-exchange-block"><span>5,000點</span> → <span class="tgopoints">1,000</span></div><div class="point-exchange-block"><span>10,000點</span> → <span class="tgopoints">2,000</span></div>
+          </div>
+          <div  class="brand-content-c4" onclick="showNotice(1);">
+			 <span class="material-icons-outlined">info</span><span style="text-decoration:underline">注意事項</span>
+        </div>			
+          <div  class="brand-content-c3">
+			  <a class="go-exchange">前往兌換</a>
+			  <a class="">兌換教學</a>
+			  
+        </div>
+      </div>
+		  <!--#4 end-->
+			  <!--#5-->
+		<div class="brand-content">
+          <div class="brand-content-c1"><img src="image/bankFUBON.png"></div>
+          <div class="brand-content-c2">
+            <div class="point-exchange-block"><span>2,000點</span> → <span class="tgopoints">200</span></div>
+          </div>
+				          <div  class="brand-content-c4" onclick="showNotice(1);">
+			  <span class="material-icons-outlined">info</span><span style="text-decoration:underline">注意事項</span>
+        </div>	
+          <div class="brand-content-c3">
+			  <a class="go-exchange">前往兌換</a>
+			  <a class="">兌換教學</a>
+		 </div>
+		</div>	
+		   <!--#5 end-->  		  
+   		<!--#6-->
+        <div class="brand-content EFEFF1">
+          <div class="brand-content-c1"><img src="image/bankHUA.png"></div>
+          <div class="brand-content-c2">
+            <div class="point-exchange-block"><span>1,260點</span> → <span class="tgopoints">200</span></div><div class="point-exchange-block"><span>2,840點</span> → <span class="tgopoints">500</span></div>
+            <div class="point-exchange-block"><span>5,500點</span> → <span class="tgopoints">1,000</span></div><div class="point-exchange-block"><span>8,140點</span> → <span class="tgopoints">1,500</span></div>
+			  <div class="point-exchange-block"><span>10,780點</span> → <span class="tgopoints">2,000</span></div>
+          </div>
+          <div  class="brand-content-c4" onclick="showNotice(1);">
+			 <span class="material-icons-outlined">info</span><span style="text-decoration:underline">注意事項</span>
+        </div>			
+          <div  class="brand-content-c3">
+			  <a class="go-exchange">前往兌換</a>
+			  <a class="">兌換教學</a>
+			  
+        </div>
+      </div>
+		  <!--#6 end-->    
+      <!--#7-->
+		<div class="brand-content">
+          <div class="brand-content-c1"><img src="image/openpoint.png"></div>
+          <div class="brand-content-c2">
+            <div class="point-exchange-block"><span>130點</span> → <span class="tgopoints">500</span></div>
+          </div>
+				          <div  class="brand-content-c4" onclick="showNotice(2);">
+			  <span class="material-icons-outlined">info</span><span style="text-decoration:underline">注意事項</span>
+        </div>	
+          <div class="brand-content-c3">
+			  <a class="go-exchange">前往兌換</a>
+			  <a class="">兌換教學</a>
+		 </div>
+		</div>	
+		   <!--#7 end-->  
+		  <!--#8-->
+		<div class="brand-content EFEFF1">
+          <div class="brand-content-c1"><img src="image/hamipoint.png"><!--<p>國泰優惠</p>--></div>
+          <div class="brand-content-c2">
+            <div class="point-exchange-block"><span>500點</span> → <span class="tgopoints">200</span></div><div class="point-exchange-block"><span>1,000點</span> → <span class="tgopoints">500</span></div>
+          </div>
+			          <div  class="brand-content-c4" onclick="showNotice(2);">
+			  <span class="material-icons-outlined">info</span><span style="text-decoration:underline">注意事項</span>
+        </div>	
+          <div class="brand-content-c3">
+			  <a class="go-exchange">前往兌換</a>
+			  <a class="">兌換教學</a>
+			  
+        </div>
+      </div>
+		  <!--#8 end-->
+		        <!--#9-->
+		<div class="brand-content">
+          <div class="brand-content-c1"><img src="image/kkday.png"></div>
+          <div class="brand-content-c2">
+            <div class="point-exchange-block"><span>5,000點</span> → <span class="tgopoints">2,000</span></div>
+          </div>
+				          <div  class="brand-content-c4" onclick="showNotice(2);">
+			  <span class="material-icons-outlined">info</span><span style="text-decoration:underline">注意事項</span>
+        </div>	
+          <div class="brand-content-c3">
+			  <a class="go-exchange">前往兌換</a>
+			  <a class="">兌換教學</a>
+		 </div>
+		</div>	
+		   <!--#9 end-->  		  
+		        <!--#10-->
+		<div class="brand-content EFEFF1">
+          <div class="brand-content-c1"><img src="image/kkday.png"></div>
+          <div class="brand-content-c2">
+            <div class="point-exchange-block"><span>480點</span> → <span class="tgopoints">300</span></div>
+          </div>
+				          <div  class="brand-content-c4" onclick="showNotice(2);">
+			  <span class="material-icons-outlined">info</span><span style="text-decoration:underline">注意事項</span>
+        </div>	
+          <div class="brand-content-c3">
+			  <a class="go-exchange">前往兌換</a>
+			  <a class="">兌換教學</a>
+		 </div>
+		</div>	
+		   <!--#10 end-->  
+		  
+		        <!--#11-->
+		<div class="brand-content">
+          <div class="brand-content-c1"><img src="image/uupon.png"></div>
+          <div class="brand-content-c2">
+            <div class="point-exchange-block"><span>300點</span> → <span class="tgopoints">300</span></div>
+          </div>
+				          <div  class="brand-content-c4" onclick="showNotice(2);">
+			  <span class="material-icons-outlined">info</span><span style="text-decoration:underline">注意事項</span>
+        </div>	
+          <div class="brand-content-c3">
+			  <a class="go-exchange">前往兌換</a>
+			  <a class="">兌換教學</a>
+		 </div>
+		</div>	
+		   <!--#11 end-->  
+     </div>
+	  <!--點數兌換列表 end-->
+		
+		<h3 id="note-content">序號注意事項</h3>
+		<div class="note">
+		<ol style="list-style: decimal;">
+			<li>序號發行類別：
+				<ul style="margin-top: 12px;list-style-type: none;font">
+					<li><div id="company-point">
+						<span class="material-icons">expand_more</span>TGo點數序號(高鐵發行)</div>
+						<ul id="company-point-ul">
+						<li>適用中信銀行、台新銀行、聯邦銀行、統一超商OPEN POINT、中華電信Hami Point、KKday、UUPON。</li>
+						<li>TGo序號歸戶期限自取得序號日起至次月月底前有效。(EX:序號取得日為111/2/15，序號歸戶期限為111/3/31。)</li>
+						</ul>						
+					</li>
+					<li><span id="company-coupon"><span class="material-icons">expand_more</span>即享券序號(宜睿發行)</span>
+						<ul id="company-coupon-ul">
+							<li>適用國泰優惠、台北富邦銀行、華南銀行、亞洲萬里通。</li>
+							<li>序號發行人：Edenred Taiwan 新加坡商宜睿智慧股份有限公司台灣分公司。</li>
+							<li>宜睿智慧即享券客服中心服務時間：週一至週五上午10:00至下午6:00（例假日及國定假日除外），如有任何問題，可透過客服常見問題聯絡，或撥打客服專線：(02)6639-1012。</li>
+							<li>即享券序號使用效期請見各家兌換網站/APP公告。</li>
+							<li>TGo序號歸戶期限自取得序號日起至次月月底前有效。(EX:序號取得日為111/2/15，序號歸戶期限為111/3/31。)</li>
+						</ul>
+					</li>
+					</ul>
+			</li>
+			
+			<li>序號使用說明：
+				<ol>
+				<li>各家卡友(會員)憑紅利點數兌換取得之TGo點數序號或即享券（以下統稱轉點序號），請至高鐵TGo會員網站輸入轉點序號後即可兌換TGo點數。</li>
+<li>使用轉點序號請至TGo會員網站兌換歸戶，兌換流程：登入會員→兌換專區→序號兌換→輸入序號（點數代碼），須區分大小寫，以半形英數字輸入序號，勿輸入空格→確認兌換。</li>
+<li>轉點序號請於票券上顯示之效期前兌換，不得零售或轉售。</li>
+<li>轉點序號為不記名，任何人持序號皆可使用，請自行妥善保管，如遭他人盜用，不再補發。</li>
+<li>轉點序號無法直接折抵現金，須先歸戶後轉換成TGo點數方得使用。</li>
+<li>轉點序號所兌換之商品或折抵消費之金額不予開立統一發票。</li>
+<li>轉點序號有效與否，以發行人票券系統所記錄之狀態為憑。 如系統因網路連線有所遲延，依兌換商家系統端資訊為準。</li>
+<li>轉點序號請勿擅自偽造、變造，以免觸犯刑責。</li>
+				</ol>
+			</li>
+			
+			
+			</ol>
+		
+		</div>
+		<h3>TGo點數注意事項</h3>
+		<div class="note">
+		<ol style="list-style: decimal;">
+		<li>TGo點數將於序號兌換成功後立即匯入至TGo帳戶。</li>
+		<li>TGo點數序號一經兌換即視同已使用，恕不得取消或返還。</li>
+		<li>TGo點數使用效期為自取得序號日完成入點後至次年年底前有效。 EX: 序號取得日期為111/7/5，於111/8/10進行入點兌換，則TGo點數使用期限為112年年底。</li>
+		<li>TGo點數不得轉換、轉讓、折換現金或其他形式調整。有關TGo點數兌換事宜、有效使用期限，依本公司會員TGo服務條款、點數規約及本公司企業網站及車站之公告內容。</li>
+		<li>本公司就本活動序號兌換保有審查之權利，如經查有以惡意電腦程式、冒用他人身分或其他違反本活動公平性等行為，一經發現或第三人檢舉，本公司得立即取消兌換資格，並追回點數。</li>
+		<li>如有任何因電腦、網路、技術或不可歸責於本公司之事由，而使兌換之資料有遲延、遺失、錯誤、無法辨識或毀損之情況，本公司不負任何法律責任，兌換者亦不得因此異議。</li>
+		<li>會員參加本活動之同時，即表示同意接受本活動辦法及注意事項之規範，如有不符或違反，本公司保有不經通知取消其兌獎資格，並就因此所生之損害，得向序號兌換者請求損害賠償。</li>
+		<li>本公司保有修改、取消、終止或暫停本活動之權利，並得對本活動之所有事宜做出解釋及決定。如有變更，將統一於本公司企業網站上公布，恕不另行通知。</li>
+		</ol>
+			</div>
+		
+    </section>
+    </div>
+  </section>
+</div>
+</div>
+</body>
+</html>
