@@ -11,6 +11,7 @@
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
 
 <style>
+	.bannerM{display:none;}
 /*******品牌logo列表block*******/	
 .brand_logos {
     display: inline-block;
@@ -77,7 +78,7 @@
 .tgopoints {
     font-size: 1.3em;
     color:#DD6A38;padding-left: 22px;background-image: url("image/tgopoint.png");background-size: 18px;background-repeat: no-repeat;
-    background-position-y: 7px;font-weight: 500;display: inline-block;font-family: math;
+    background-position-y: 7px;font-weight: 500;display: inline-block;font-family: math;font-family: -apple-system;
 }
 	
 	/*******c3:btn*******/	
@@ -110,9 +111,13 @@
 	.material-icons-hide{transform: rotate(-90deg)};
 
 	
-	@media screen and (max-width:768px){}
+	@media screen and (max-width:768px){
+
+	}
 	
 	@media screen and (max-width:768px){
+				.bannerP{display:none;}
+		.bannerM{display:block;}
 		.brand-content{display:inline-block;}
 		.brand-content>div{text-align: left;margin-top: 0px;padding-bottom: 0px;}
 		
@@ -131,7 +136,7 @@
 		.brand-content-c2{width: 100%}
 		
 		.brand-content-c3{width: 100%;}
-		.brand-content-c3>a{width:calc(100%/3 - 10px);float: right;text-align: center;margin: 5px;padding: 20px}
+		.brand-content-c3>a{width:calc(100%/3 - 10px);float: right;text-align: center;margin: 5px;padding: 15px}
 		.brand-content-c4{display: none;}
 		.brand-content-c4m{display: block!important;}
 		
@@ -197,7 +202,7 @@ $(document).ready(function(){
     </section>
     <div class="con">
     <!--主視覺區塊-->
-    <section id="section"> <img src="image/banner.jpg" width="100%" alt=""/> 
+    <section id="section"> <img src="image/banner.jpg" width="100%" alt="" class="bannerP"><img src="image/bannerM.jpg" width="100%" alt="" class="bannerM"> 
       
       <!--品牌清單
       <section>
@@ -373,7 +378,7 @@ $(document).ready(function(){
 		  <!--#8 end-->
 		        <!--#9-->
 		<div class="brand-content">
-          <div class="brand-content-c1"><img src="image/kkday.png"></div>
+          <div class="brand-content-c1"><img src="image/asiaMilesw.png"></div>
           <div class="brand-content-c2">
             <div class="point-exchange-block"><span>5,000點</span> → <span class="tgopoints">2,000</span></div>
           </div>
