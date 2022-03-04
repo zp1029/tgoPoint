@@ -96,6 +96,7 @@
 	.brand-content-c4>span{vertical-align: middle;padding: 15px 1px;}
 	.brand-content-c4:hover{color:#ca4f0f;cursor: pointer;}
 	.brand-content-c4>.material-icons-outlined{font-size:0.9rem;}
+	.brand-content-c4m{display: none!important;}
 	
 	/*******注意事項block*******/
 	
@@ -108,8 +109,31 @@
 	.material-icons:hover{cursor: pointer;}
 	.material-icons-hide{transform: rotate(-90deg)};
 
-	@media (max-width: 1190px){
+	
+	@media screen and (max-width:1200px){}
+	
+	@media (max-width: 1200px){
+		.brand-content{display:inline-block;}
+		.brand-content>div{text-align: left;margin-top: 0px;padding-bottom: 0px;}
 		
+		
+		
+		
+		.EFEFF1{background-color: #FFF;}
+		.brand-content{border-top:3px solid #EFEFF1;}
+		
+		.point-exchange-block{border-color: ;}
+		
+		.brand-content-c1{width: 100%;}  
+		.brand-content-c1>span::after{content: " / 紅利點數 → TGo點數"}  
+		
+		.brand-title>.brand-content-c2{display: none;}   
+		.brand-content-c2{width: 100%}
+		
+		.brand-content-c3{width: 100%;}
+		.brand-content-c3>a{width:calc(100%/3 - 10px);float: right;text-align: center;margin: 5px;padding: 20px}
+		.brand-content-c4{display: none;}
+		.brand-content-c4m{display: block!important;}
 		
 	}
 	
@@ -211,8 +235,6 @@ $(document).ready(function(){
         <div class="brand-title">
           <div class="brand-content-c1"><span>合作廠商</span></div>
           <div class="brand-content-c2" style="justify-content: center"><span>紅利點數 → TGo點數</span></div>
-		  
-          <div class="brand-content-c3"></div>
         </div>
 		  <!--#1-->
         <div class="brand-content">
@@ -227,6 +249,7 @@ $(document).ready(function(){
           <div  class="brand-content-c3">
 			  <a class="go-exchange">前往兌換</a>
 			  <a class="">兌換教學</a>
+			  <a class="brand-content-c4m" onclick="showNotice(1);">注意事項</a>
 			  
         </div>
       </div>
@@ -243,6 +266,7 @@ $(document).ready(function(){
           <div class="brand-content-c3">
 			  <a class="go-exchange">前往兌換</a>
 			  <a class="">兌換教學</a>
+			  <a class="brand-content-c4m" onclick="showNotice(1);">注意事項</a>
 			  
         </div>
       </div>
@@ -259,6 +283,7 @@ $(document).ready(function(){
           <div class="brand-content-c3">
 			  <a class="go-exchange">前往兌換</a>
 			  <a class="">兌換教學</a>
+			  <a class="brand-content-c4m" onclick="showNotice(1);">注意事項</a>
 		 </div>
 		</div>	
 		   <!--#3 end-->  
@@ -275,6 +300,7 @@ $(document).ready(function(){
           <div  class="brand-content-c3">
 			  <a class="go-exchange">前往兌換</a>
 			  <a class="">兌換教學</a>
+			  <a class="brand-content-c4m" onclick="showNotice(1);">注意事項</a>
 			  
         </div>
       </div>
@@ -291,6 +317,7 @@ $(document).ready(function(){
           <div class="brand-content-c3">
 			  <a class="go-exchange">前往兌換</a>
 			  <a class="">兌換教學</a>
+			  <a class="brand-content-c4m" onclick="showNotice(1);">注意事項</a>
 		 </div>
 		</div>	
 		   <!--#5 end-->  		  
@@ -308,7 +335,7 @@ $(document).ready(function(){
           <div  class="brand-content-c3">
 			  <a class="go-exchange">前往兌換</a>
 			  <a class="">兌換教學</a>
-			  
+			  <a class="brand-content-c4m" onclick="showNotice(1);">注意事項</a>
         </div>
       </div>
 		  <!--#6 end-->    
@@ -324,6 +351,7 @@ $(document).ready(function(){
           <div class="brand-content-c3">
 			  <a class="go-exchange">前往兌換</a>
 			  <a class="">兌換教學</a>
+			  <a class="brand-content-c4m" onclick="showNotice(2);">注意事項</a>
 		 </div>
 		</div>	
 		   <!--#7 end-->  
@@ -339,7 +367,7 @@ $(document).ready(function(){
           <div class="brand-content-c3">
 			  <a class="go-exchange">前往兌換</a>
 			  <a class="">兌換教學</a>
-			  
+			  <a class="brand-content-c4m" onclick="showNotice(2);">注意事項</a>
         </div>
       </div>
 		  <!--#8 end-->
@@ -355,6 +383,7 @@ $(document).ready(function(){
           <div class="brand-content-c3">
 			  <a class="go-exchange">前往兌換</a>
 			  <a class="">兌換教學</a>
+			  <a class="brand-content-c4m" onclick="showNotice(2);">注意事項</a>
 		 </div>
 		</div>	
 		   <!--#9 end-->  		  
@@ -370,6 +399,7 @@ $(document).ready(function(){
           <div class="brand-content-c3">
 			  <a class="go-exchange">前往兌換</a>
 			  <a class="">兌換教學</a>
+			  <a class="brand-content-c4m" onclick="showNotice(2);">注意事項</a>
 		 </div>
 		</div>	
 		   <!--#10 end-->  
@@ -386,6 +416,7 @@ $(document).ready(function(){
           <div class="brand-content-c3">
 			  <a class="go-exchange">前往兌換</a>
 			  <a class="">兌換教學</a>
+			  <a class="brand-content-c4m" onclick="showNotice(2);">注意事項</a>
 		 </div>
 		</div>	
 		   <!--#11 end-->  
